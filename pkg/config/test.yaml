@@ -1,0 +1,22 @@
+#Etcd:
+#    Peers:
+#        - http://127.0.0.1:2379
+#    Root: /xl/acc/conf/demo
+#    Event: event
+Logger:
+  Level: ERROR
+  FileName: ../logs/server.log
+  MaxBackups: 5
+  MaxSize: 100MB
+  MaxAge: 0
+AccessLog:
+  Log:
+    Level: INFO
+    FileName: ../logs/access.log
+    MaxBackups: 5
+    MaxSize: 100MB
+    MaxAge: 0
+TestArrayEtcdKey: /hello
+TestArray:
+  - A: A
+  - B: B
