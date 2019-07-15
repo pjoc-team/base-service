@@ -5,13 +5,15 @@ import (
 	"testing"
 )
 
+var clusterId = "06"
+
 func TestGenerateOrderId(t *testing.T) {
-	generator := New("06", 1000)
+	generator := New(&clusterId, 1000)
 	id := generator.GenerateOrderId()
 	fmt.Println(id)
 }
 
-var generator = New("06", 1000)
+var generator = New(&clusterId, 1000)
 
 func BenchmarkGenerateOrderId(b *testing.B) {
 	result := make(map[string]int)
